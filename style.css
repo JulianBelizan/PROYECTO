@@ -7,7 +7,7 @@
 
 body{
     background: rgb(175,175,175);
-background: linear-gradient(0deg, rgba(175,175,175,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(0deg, rgba(175,175,175,1) 0%, rgba(0,0,0,1) 100%);
 }
 /*Header*/
 .top{
@@ -46,7 +46,6 @@ a:hover{
     display: none;
 }
 
-
 /*Header*/
 /*Inicio*/
 .inicio {
@@ -64,7 +63,6 @@ a:hover{
     color: white;
 }
 /*Inicio*/
-/*Productos*/
 .servicios{
     text-align: center;
     width: 100%;
@@ -89,8 +87,6 @@ article>ul>li{
     color:rgb(255, 255, 255);
 }
 
-
-/*Productos*/
 /*Quienes Somos*/
 .quienes{
     width: 100%;
@@ -113,7 +109,6 @@ article>ul>li{
 }
 /*Quienes Somos*/
 /*Contacto*/
-/* Estilos de la sección .contact */
 .contact {
     display: flex;
     align-items: center;
@@ -128,24 +123,24 @@ article>ul>li{
     justify-content: space-between;
     border: 1px solid #000000;
     border-radius: 20px;
-    width: 80%; /* Ancho del formulario */
-    max-width: 1000px; /* Ancho máximo del formulario */
+    width: 80%;
+    max-width: 1000px;
     height: 80vh;
     padding-left: 20px;
-    background-color: white; /* Color de fondo del formulario */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #order-form img {
-    max-width: 60%; /* Ancho máximo de la imagen */
-    height: 100%; /* Altura automática de la imagen */
-    object-fit:fill; /* Cubrir el área del contenedor */
+    max-width: 60%;
+    height: 100%;
+    object-fit:fill;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
 #order-form form {
-    width: 60%; /* Ancho del formulario */
+    width: 60%;
 }
 
 
@@ -162,15 +157,15 @@ article>ul>li{
 }
 
 #order-form input[type="submit"] {
-    background-color: #4CAF50; /* Color de fondo del botón */
-    color: white; /* Color del texto del botón */
+    background-color: #4CAF50;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 #order-form input[type="submit"]:hover {
-    background-color: #45a049; /* Color de fondo del botón al pasar el ratón */
+    background-color: #45a049;
 }
 
 #order-form p {
