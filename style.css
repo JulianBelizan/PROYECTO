@@ -175,66 +175,24 @@ article>ul>li{
 /*Contacto*/
 
 /* Estilos para el modo oscuro */
-body.dark-mode {
+.dark-mode {
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(175,175,175,1) 100%);
-    color: #fff;
 }
 
-.dark-mode .contact {
-    background: rgb(20,20,20);
-    color: #fff;
-}
-
-.dark-mode .list {
-    color: #fff;
-}
-
-.dark-mode .icon {
-    color: #fff;
-}
-
+.dark-mode .title,
+.dark-mode .title-p,
+.dark-mode .servicios>h2,
+.dark-mode .servicios>article>h3,
+.dark-mode .servicios>article>ul>li,
+.dark-mode .servicios>p,
+.dark-mode .quienes>h2,
+.dark-mode .quienes>article>h3,
+.dark-mode .quienes>article>p,
+.dark-mode .quienes>article>ul>li,
+.dark-mode .quienes>p,
+.dark-mode #order-form,
+.dark-mode .list>li>a,
 .dark-mode .top {
-    background-color: #333;
+    color: black;
 }
-
-.dark-mode a:hover {
-    color: #fff;
-}
-
-.dark-mode .inicio {
-    background-color: #333;
-}
-
-.dark-mode .servicios {
-    background-color: #333;
-}
-
-.dark-mode .quienes {
-    background-color: #333;
-}
-
-.dark-mode .quienes h2 {
-    color: #fff;
-}
-
-.dark-mode .quienes p, .dark-mode .quienes article {
-    color: #ccc;
-}
-
-.dark-mode .contact {
-    background-color: #333;
-}
-
-.dark-mode #order-form {
-    background-color: #222;
-}
-
-.dark-mode #order-form input[type="submit"] {
-    background-color: #4CAF50;
-}
-
-.dark-mode #order-form input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
