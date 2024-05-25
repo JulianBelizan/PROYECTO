@@ -70,3 +70,20 @@ document.addEventListener("DOMContentLoaded", function() {
         // Agregar un event listener para el evento submit del formulario
         document.getElementById("order-form").addEventListener("submit", validateForm);
     });
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        var backButton = document.getElementById("back-to-top");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backButton.classList.add("show");
+        } else {
+            backButton.classList.remove("show");
+        }
+    }
+    
+    document.getElementById("back-to-top").addEventListener("click", function() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+    
