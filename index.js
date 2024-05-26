@@ -26,50 +26,51 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
     
-    document.addEventListener("DOMContentLoaded", function() {
-        // Función para verificar si una cadena contiene números
-        function containsNumbers(input) {
-            return /\d/.test(input);
+document.addEventListener("DOMContentLoaded", function() {
+    // Función para verificar si una cadena contiene números
+    function containsNumbers(input) {
+        return /\d/.test(input);
+    }
+
+    // Función para verificar si el correo electrónico tiene un dominio real
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Función para validar el formulario
+    function validateForm(event) {
+        event.preventDefault(); // Evitar el envío del formulario por defecto
+
+        // Obtener los valores de los campos del formulario
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var age = document.getElementById("age").value;
+
+        if (age < 18) {
+            alert("Usted es menor y no puede acceder a nuestros servicios");
+            return;
         }
 
-        // Función para verificar si el correo electrónico tiene un dominio real
-        function isValidEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        // Verificar si el nombre y el apellido contienen números
+        if (containsNumbers(name)) {
+            alert("El nombre no puede contener números.");
+            return;
         }
 
-        // Función para validar el formulario
-        function validateForm(event) {
-            event.preventDefault(); // Evitar el envío del formulario por defecto
-
-            // Obtener los valores de los campos del formulario
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var age = document.getElementById("age").value;
-
-            if(age<18){
-                alert("Usted es menor y no puede acceder a nuestros servicios");
-                return;
-            }
-
-            // Verificar si el nombre y el apellido contienen números
-            if (containsNumbers(name)) {
-                alert("El nombre no puede contener números.");
-                return;
-            }
-
-            // Verificar si el correo electrónico tiene un dominio real
-            if (!isValidEmail(email)) {
-                alert("Por favor, ingresa un correo electrónico válido.");
-                return;
-            }
-
-            // Si la validación es exitosa, enviar el formulario
-            alert("¡Formulario válido! Enviando solicitud...");
+        // Verificar si el correo electrónico tiene un dominio real
+        if (!isValidEmail(email)) {
+            alert("Por favor, ingresa un correo electrónico válido.");
+            return;
         }
 
-        // Agregar un event listener para el evento submit del formulario
-        document.getElementById("order-form").addEventListener("submit", validateForm);
-    });
+        // Si la validación es exitosa, enviar el formulario
+        alert("¡Formulario válido! Enviando solicitud...");
+    }
+
+    // Agregar un event listener para el evento submit del formulario
+    document.getElementById("contact").addEventListener("submit", validateForm);
+});
+
 
     window.onscroll = function() {scrollFunction()};
 
