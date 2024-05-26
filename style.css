@@ -1,23 +1,24 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Orbitron", sans-serif;    
+    font-family: "Orbitron", sans-serif;
 }
 
-body{
-    background: rgb(175,175,175);
-    background: linear-gradient(0deg, rgba(175,175,175,1) 0%, rgba(0,0,0,1) 100%);
+body {
+    background: rgb(175, 175, 175);
+    background: linear-gradient(0deg, rgba(175, 175, 175, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
+
 /*Header*/
-.top{
+.top {
     display: flex;
     justify-content: space-between;
     color: white;
     align-items: center;
 }
 
-.list{
+.list {
     display: flex;
     list-style-type: none;
     gap: 50px;
@@ -26,106 +27,99 @@ body{
     margin: auto;
 }
 
-li>a{
+li>a {
     text-decoration: none;
     color: white;
 }
 
-a:hover{
-    color:darkgray;
+a:hover {
+    color: darkgray;
 }
 
-.icon{
+.icon {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
 }
 
-#white{
+#white {
     display: none;
 }
 
-/*Header*/
 /*Inicio*/
 .inicio {
     text-align: center;
-    width: 100%;
-    height: 100vh;
-    overflow: auto;
-
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
-.title{
+
+.title {
     color: white;
     font-size: xx-large;
 }
-.title-p{
+
+.title-p {
     color: white;
 }
-/*Inicio*/
-.servicios{
+
+/*Servicios*/
+.servicios {
     text-align: center;
-    width: 100%;
-    height: 100vh;
-    overflow: auto;
-}
-
-.servicios>h2{
-    padding-bottom: 50px;
-    color:rgb(255, 255, 255);
-}
-article>h3{
-    color:rgba(246, 246, 246, 0.924);
-}
-
-article>ul>li{
-    color:rgba(255, 255, 255, 0.738);
-}
-
-.servicios>p{
-    padding-top:20px;
-    color:rgb(255, 255, 255);
-}
-
-/*Quienes Somos*/
-.quienes{
-    width: 100%;
-    height: 100vh;
-    overflow: auto;
-}
-
-.quienes>h2{
-    color:white;
-    margin-top: 15px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
-.quienes>h2,h3{
-    text-align: center;
+.servicios>.container>.row>.col>h2 {
+    padding-bottom: 50px;
+    color: rgb(255, 255, 255);
 }
 
-.quienes>p,.quienes>article{
-    color:rgba(255, 255, 255, 0.738);
+article>h3 {
+    color: rgba(246, 246, 246, 0.924);
 }
+
+article>ul>li {
+    color: rgba(255, 255, 255, 0.738);
+}
+
+.servicios>.container>.row>.col>p {
+    padding-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
 /*Quienes Somos*/
+.quienes {
+    text-align: center;
+    margin: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.quienes>.container>.row>.col>h2{
+    text-align: center;
+    color: white;
+    padding-bottom: 50px;
+}
+
+.quienes>.container>.row>.col>article>p,
+.quienes>article,
+.quienes>.container>.row>.col>p {
+    color: rgba(255, 255, 255, 0.738);
+}
+
 /*Contacto*/
 .contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 /* Estilos del formulario */
 #order-form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     border: 1px solid #000000;
     border-radius: 20px;
     width: 80%;
     max-width: 1000px;
-    height: 80vh;
     padding-left: 20px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -134,7 +128,7 @@ article>ul>li{
 #order-form img {
     max-width: 60%;
     height: 100%;
-    object-fit:fill;
+    object-fit: fill;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -142,7 +136,6 @@ article>ul>li{
 #order-form form {
     width: 60%;
 }
-
 
 #order-form label {
     display: block;
@@ -172,31 +165,7 @@ article>ul>li{
     font-size: 14px;
 }
 
-/*Contacto*/
-
-/* Estilos para el modo oscuro */
-.dark-mode {
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(175,175,175,1) 100%);
-}
-
-.dark-mode .title,
-.dark-mode .title-p,
-.dark-mode .servicios>h2,
-.dark-mode .servicios>article>h3,
-.dark-mode .servicios>article>ul>li,
-.dark-mode .servicios>p,
-.dark-mode .quienes>h2,
-.dark-mode .quienes>article>h3,
-.dark-mode .quienes>article>p,
-.dark-mode .quienes>article>ul>li,
-.dark-mode .quienes>p,
-.dark-mode #order-form,
-.dark-mode .list>li>a,
-.dark-mode .top {
-    color: black;
-}
-
+/* Back to top button */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -211,8 +180,62 @@ article>ul>li{
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
 }
 
 .back-to-top.show {
     opacity: 1;
+}
+
+/* Estilos para el modo oscuro */
+.dark-mode {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(175,175,175,1) 100%);
+}
+
+.dark-mode .col-auto>h2,
+.dark-mode .title,
+.dark-mode .title-p,
+.dark-mode h2,
+.dark-mode .servicios>article>h3,
+.dark-mode .servicios>article>ul>li,
+.dark-mode .servicios>p,
+.dark-mode .list>li>a,
+.dark-mode .top {
+    color: black;
+}
+
+.dark-mode #servicestitle,
+.dark-mode form,
+.dark-mode h2,
+.dark-mode col>h2
+{
+    color:rgb(255, 255, 255);
+}
+
+.dark-mode .servicios>.container>.row>.col>h2 {
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode article>h3 {
+    color: rgba(0, 0, 0, 0.924);
+}
+
+.dark-mode article>ul>li {
+    color: rgba(0, 0, 0, 0.738);
+}
+
+.dark-mode .servicios>.container>.row>.col>p {
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode .quienes>.container>.row>.col>h2{
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode .quienes>.container>.row>.col>article>p,
+.dark-mode .quienes>.container>.row>.col>article>ul>li,
+.dark-mode .quienes>article,
+.dark-mode .quienes>.container>.row>.col>p {
+    color: rgba(205, 187, 187, 0.738);
 }
